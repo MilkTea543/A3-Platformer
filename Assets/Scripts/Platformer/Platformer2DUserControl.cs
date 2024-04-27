@@ -27,15 +27,7 @@ namespace UnityStandardAssets._2D
         private void Update()
         {
 
-            if (reverse) {
-                if (reverseTimer > 0) {
-                    reverseTimer -= Time.deltaTime;
-                    return;
-                }
-                reverse = false; 
-                GetComponent<SpriteRenderer>().color = Color.white;
-                reverseTimer = reverseSpan;
-            }
+           
             // If control is disabled, return.
             if (m_DisableControl) return;
 
@@ -49,6 +41,16 @@ namespace UnityStandardAssets._2D
             {
                 // Read the dash input (Fire3 is left shift)
                 m_Dash = CrossPlatformInputManager.GetButtonDown("Fire3");
+            }
+
+             if (reverse) {
+                if (reverseTimer > 0) {
+                    reverseTimer -= Time.deltaTime;
+                    return;
+                }
+                reverse = false; 
+                GetComponent<SpriteRenderer>().color = Color.white;
+                reverseTimer = reverseSpan;
             }
         }
         private void reverseTrue() //player receives reverseTrue message from disorientating vines
