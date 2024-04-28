@@ -197,11 +197,11 @@ public class Enemy : MonoBehaviour
 	{
 		patrolIndex = 0;
 		patrolTarget = patrolPoints[patrolIndex];
-	}
+    }
 
 
-	// have we arrived near our patrol target
-	private bool IsPatrolWaypointArrived()
+    // have we arrived near our patrol target
+    private bool IsPatrolWaypointArrived()
 	{
 		return (Mathf.Abs (patrolTarget.position.x - transform.position.x) < arriveDistance);
 	}
@@ -231,10 +231,10 @@ public class Enemy : MonoBehaviour
 
 		// and this is the new target point
 		patrolTarget = patrolPoints[patrolIndex];
-	}
+    }
 
 
-	void Death()
+    void Death()
 	{
 		// set sprite to the deadEnemy sprite.
 		ren.sprite = deadEnemy;

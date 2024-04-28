@@ -67,7 +67,7 @@ namespace UnityStandardAssets._2D
             if (m_DisableControl) return;
 
             // Read the inputs.
-            bool crouch = Input.GetKey(KeyCode.LeftControl);
+            bool crouch = Input.GetKey(KeyCode.S);
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             if (reverse) {
                 h = -CrossPlatformInputManager.GetAxis("Horizontal");  //when reverse is true, horizontal inputs go in opposite directions
