@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-	public float moveSpeed = 2f;				// The speed the enemy moves at.
+	public float moveSpeed;
 	public bool canDie = false;					// Can the enemy be killed?
 	public int scoreForKill = 100;				// How many points is killing an enemy worth?
 	public int hitPoints = 1;					// How many times can the enemy be hurt before it dies?
@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
 	public float deathSpinMax = 100f;			// A value to give the maximum amount of Torque when dying
 	public bool flipOnStart = false;			// Change movement direction on start.
 	public bool instantKill = false;			// Does the enemy kill on collision?
+	public bool explode;
 	public float repeatDamagePeriod = 2f; 		// How frequently we can hurt the player..
 	public float hurtForceX = 10f; 				// The force with which the player is pushed when hurt.
 	public float hurtForceY = 30f; 				// The force with which the player is pushed when hurt.
@@ -25,13 +26,11 @@ public class Enemy : MonoBehaviour
 	public float arriveDistance = 0.3f;	// how close to consider I made it?
 	public Transform[] patrolPoints;
 
-
 	private Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
 	private Transform topCheck;			// Reference to the position of the gameobject used for checking if the player is above.
 	private float lastHitTime; 			// The time at which the player was last hit.
 	private bool dead;					// Whether or not the enemy is dead.
 	private SpriteRenderer ren;			// Reference to the sprite renderer.
-
 	
 	void Awake ()
 	{
@@ -61,7 +60,7 @@ public class Enemy : MonoBehaviour
 		switch (behaviour) 
 		{
 		case Behaviour.Hold:		BehaviourHoldUpdate(); 			break;
-		case Behaviour.FreeRange:	BehaviourFreeRangeUpdate ();	break;
+		case Behaviour.FreeRange:	BehaviourFreeRangeUpdate();	    break;
 		case Behaviour.Patrol:		BehaviourPatrolUpdate();		break;
 		}
 
@@ -156,7 +155,7 @@ public class Enemy : MonoBehaviour
 		}
 
 		// Set the enemy's velocity to moveSpeed in the x direction.
-		GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);	
+		GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);		
 	}
 
 
@@ -184,11 +183,16 @@ public class Enemy : MonoBehaviour
 		// Set the enemy's velocity to moveSpeed in the x direction.
 		GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
-		if (dead)
+
+		if (dead && !explode)
 		{
 			// Allow the enemy to rotate and spin it by adding a torque.
 			GetComponent<Rigidbody2D>().freezeRotation = false;
 			GetComponent<Rigidbody2D>().AddTorque(Random.Range(deathSpinMin,deathSpinMax));
+		}
+		else if (dead && explode)
+		{
+			Destroy(gameObject);
 		}
 	}
 
@@ -211,8 +215,6 @@ public class Enemy : MonoBehaviour
 	{
 		// go to the next patrol point
 		patrolIndex += patrolDI;
-
-		// did we go off the end?
 		if (patrolIndex >= patrolPoints.Length || patrolIndex < 0) 
 		{
 			// so do we go back to the beginning & keep counting up, or go back the other way through the points (ping pong)?

@@ -468,11 +468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.819168
+      value: 32.770004
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.049986
+      value: 28.049997
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -574,6 +574,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -1105,6 +1110,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -1572,6 +1582,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -2552,6 +2567,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -2631,6 +2651,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -2840,6 +2865,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -4477,6 +4507,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -5414,6 +5449,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1976895595}
     m_Modifications:
+    - target: {fileID: 1683428695477987709, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1194710161}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalScale.y
