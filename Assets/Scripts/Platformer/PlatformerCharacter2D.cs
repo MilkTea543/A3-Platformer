@@ -192,6 +192,7 @@ namespace UnityStandardAssets._2D
         }
         public void Move(float move, bool crouch, bool jump, bool sustainJump, bool dash) // Note:this function was updated from the original Move function to add a fifth argument to recognise the DASH. This is called from PlatformerCharacter2DUserControl (Physics based example project).
         {
+
             // If player is in the hurt state, do not process input
             if (m_Hurt)
                 return;
