@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BranchWalls : MonoBehaviour
+public class DestroyOnShift : MonoBehaviour
 {
     public float destroyDistance = 0.1f;  // The distance at which the object is destroyed
     public KeyCode destroyKey = KeyCode.LeftShift;  // The key used to trigger destruction
