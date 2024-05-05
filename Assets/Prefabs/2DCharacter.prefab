@@ -213,8 +213,8 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 1
-  m_SlimeTemporary: 0
-  m_SlimeTempDuration: 5
+  m_SlimeTemporary: 1
+  m_SlimeTempDuration: 2
   m_SlimeTint: {r: 0.54509807, g: 0.8000001, b: 0.3372549, a: 1}
   m_SlimeSpeedScale: 0.5
   m_SlimeAccellScale: 0.9
