@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
 	[SerializeField] private bool clampHealth = true;
 	[SerializeField] private float pickupHealth = 25f;	// how many points does this type of pickup get me?
 	[SerializeField] private float damage = 10f;
+	[SerializeField] private float bulletDamage = 5f;
 	[SerializeField] private float mineDamage = 20f;
 	// the player's current health
 	private float health = 0;
@@ -69,6 +70,17 @@ public class Health : MonoBehaviour
 	public void SubtractHealthOnHit ()
 	{
 		health -= damage;
+
+		CheckHealth();
+
+		if (health < 0)
+			health = 0;
+
+		healthText.text = "Health: " + (int)health;
+	}
+	public void SubtractBulletHealthOnHit()
+	{
+		health -= bulletDamage;
 
 		CheckHealth();
 

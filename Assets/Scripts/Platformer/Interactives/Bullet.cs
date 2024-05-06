@@ -30,8 +30,11 @@ public class Bullet : MonoBehaviour
         // If the bullet hits the player, destroy itself
         if (other.gameObject.CompareTag("Player"))
         {
+            GameObject h = GameObject.Find("HealthText");
+			if (h != null) h.SendMessage("SubtractBulletHealthOnHit");
             Destroy(gameObject);
             // add damage logic here
+
             // Example: other.gameObject.GetComponent<PlatformerCharacter2D>().TakeDamage();
         }
     }
