@@ -15,6 +15,8 @@ namespace UnityStandardAssets._2D
         private float reverseTimer;
         public float reverseSpan = 5;
         public bool reverse;
+        public bool panEquipped = false;
+        
 
         private SpriteRenderer m_Renderer;  // Reference to the SpriteRenderer component
 
@@ -78,6 +80,11 @@ namespace UnityStandardAssets._2D
         public void DisableControl(bool disableInput)
         {
             m_DisableControl = disableInput;
+        }
+
+        private void AddFryingPan()
+        {
+            panEquipped = true;
         }
     }
 }
