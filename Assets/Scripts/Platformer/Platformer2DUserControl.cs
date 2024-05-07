@@ -77,6 +77,7 @@ namespace UnityStandardAssets._2D
             m_Dash = false;
         }
 
+
         public void DisableControl(bool disableInput)
         {
             m_DisableControl = disableInput;

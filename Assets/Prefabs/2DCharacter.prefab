@@ -216,7 +216,7 @@ MonoBehaviour:
   m_SlimeTemporary: 1
   m_SlimeTempDuration: 2
   m_SlimeTint: {r: 0.54509807, g: 0.8000001, b: 0.3372549, a: 1}
-  m_SlimeSpeedScale: 0.5
+  m_SlimeSpeedScale: 0.4
   m_SlimeAccellScale: 0.9
   m_SlimeJumpScale: 0.7
   m_SlimeJumpSusForceScale: 0.7
@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reverseSpan: 5
   reverse: 0
+  panEquipped: 0
 --- !u!58 &58114744732758184
 CircleCollider2D:
   m_ObjectHideFlags: 0
