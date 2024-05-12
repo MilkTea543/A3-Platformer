@@ -16,7 +16,8 @@ public class Enemy : MonoBehaviour
 	public float repeatDamagePeriod = 2f; 		// How frequently we can hurt the player..
 	public float hurtForceX = 10f; 				// The force with which the player is pushed when hurt.
 	public float hurtForceY = 30f; 				// The force with which the player is pushed when hurt.
-
+	public int panDamage = 2; 
+	public bool panResistant = false;
 	public enum Behaviour { Hold, FreeRange, Patrol };
 	public Behaviour behaviour = Behaviour.Hold;
 
@@ -132,7 +133,13 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-
+	void panHit () {
+		if (!panResistant)
+		{
+			Debug.Log("ouch!");
+			Destroy(gameObject);
+		}
+	}
 	private void BehaviourHoldUpdate()
 	{
 		// chill, man
