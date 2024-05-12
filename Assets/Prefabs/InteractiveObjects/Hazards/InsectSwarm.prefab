@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  canDie: 0
+  canDie: 1
   scoreForKill: 100
   hitPoints: 1
   deadEnemy: {fileID: 0}

@@ -159,11 +159,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4aee9c6b2d6482aa72136a6eea12a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageOther: 
+  messageOther: reverseTrue
   messageSelf: 
   messageBroadcast: 
-  messageTarget: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
-  messageTargetMessage: reverseTrue
+  messageTarget: {fileID: 0}
+  messageTargetMessage: 
   filterTag: Player
 --- !u!114 &8858292421985292613
 MonoBehaviour:

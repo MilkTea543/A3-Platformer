@@ -12,10 +12,11 @@ namespace UnityStandardAssets._2D
         private bool m_SustainJump;
         private bool m_DisableControl;
         private bool m_Dash;           // DASH UPDATE
-        private float reverseTimer;
+        public float reverseTimer;
         public float reverseSpan = 5;
         public bool reverse;
         public bool panEquipped = false;
+        private GameObject messageBranch = null;
         
 
         private SpriteRenderer m_Renderer;  // Reference to the SpriteRenderer component
@@ -25,6 +26,7 @@ namespace UnityStandardAssets._2D
             m_Character = GetComponent<PlatformerCharacter2D>();
             m_Renderer = GetComponent<SpriteRenderer>();
             reverseTimer = reverseSpan;
+            messageBranch = GameObject.FindGameObjectWithTag("BranchWalls");
         }
 
         private void Update()
@@ -57,6 +59,21 @@ namespace UnityStandardAssets._2D
                 reverseTimer = reverseSpan;
             }
         }
+        public void reverseTrue() {
+            if (!reverse) {
+                reverse = true;
+            }
+        }
+          public void AddFryingPan()
+        {
+            panEquipped = true;
+            messageBranch.SendMessage("bwEnable");
+        }
+
+        public void DisableControl(bool disableInput)
+        {
+            m_DisableControl = disableInput;
+        }
 
         private void FixedUpdate()
         {
@@ -75,17 +92,6 @@ namespace UnityStandardAssets._2D
             m_Character.Move(h, crouch, m_Jump, m_SustainJump, m_Dash);
             m_Jump = false;
             m_Dash = false;
-        }
-
-
-        public void DisableControl(bool disableInput)
-        {
-            m_DisableControl = disableInput;
-        }
-
-        private void AddFryingPan()
-        {
-            panEquipped = true;
         }
     }
 }
