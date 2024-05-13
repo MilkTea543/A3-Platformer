@@ -73,26 +73,23 @@ public class Enemy : MonoBehaviour
 		// If the colliding gameobject is an Enemy, look at if we should take damage...  (NB - only once per "contact" - then enemy & player are separated)
 		if (other.gameObject.tag == "Player")
 		{
-			if ((other.transform.position.y > topCheck.position.y) && canDie)
-			{
-				// player is hitting from above...
-				hitPoints--;
+            if ((other.transform.position.y > topCheck.position.y) && canDie)
+            {
+                // player is hitting from above...
+                hitPoints--;
 
-				// bounce the player
-				other.gameObject.GetComponent<UnityStandardAssets._2D.PlatformerCharacter2D>().EnemyJump();
+                // If the enemy has zero or fewer hit points and isn't dead yet...
+                if (hitPoints <= 0 && !dead)
+                {
+                    // ... call the death function.
+                    Death();
+                    return;
+                }
 
-				// If the enemy has zero or fewer hit points and isn't dead yet...
-				if (hitPoints <= 0 && !dead)
-				{
-					// ... call the death function.
-					Death ();
-					return;
-				}
-
-			}
-			else
-			{
-				if (instantKill)
+            }
+            else
+            {
+                if (instantKill)
 				{
 					GameObject h = GameObject.Find("HealthText");
 					if (h != null) h.SendMessage("LoseAllHealth");
@@ -262,9 +259,12 @@ public class Enemy : MonoBehaviour
 			c.isTrigger = true;
 		}
 
-		// Play an audioclip....
+        // Play an audioclip....
 
-	}
+        // Stop shooting bullets
+        GetComponent<Pitcher>().Die();
+
+    }
 
 
 	private void Flip()

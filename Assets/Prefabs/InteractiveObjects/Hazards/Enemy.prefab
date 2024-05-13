@@ -274,7 +274,7 @@ MonoBehaviour:
   moveSpeed: 2
   canDie: 1
   scoreForKill: 0
-  hitPoints: 0
+  hitPoints: 1
   deadEnemy: {fileID: 21300000, guid: b1a98e1193ee34351ad2695419207690, type: 3}
   deathSpinMin: -100
   deathSpinMax: 100

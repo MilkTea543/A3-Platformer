@@ -10,6 +10,8 @@ public class Pitcher : MonoBehaviour
     public float activationDistance = 10f; // Distance at which the pitcher starts shooting
 
     private Transform player; // Reference to the player object
+    private bool isAlive = true; // Flag to track if the enemy is alive
+
 
     void Start()
     {
@@ -19,6 +21,11 @@ public class Pitcher : MonoBehaviour
 
     void Update()
     {
+        if (!isAlive)
+        {
+            return; // If the enemy is dead, exit the Update method
+        }
+
         // Check if the player is within the activation distance
         if (Vector2.Distance(transform.position, player.position) <= activationDistance)
         {
@@ -47,4 +54,9 @@ public class Pitcher : MonoBehaviour
         rb.AddForce(direction.normalized * bulletForce, ForceMode2D.Impulse);
     }
 
+    public void Die()
+    {
+        isAlive = false;
+        // Add any additional code you need to handle the enemy's death
+    }
 }

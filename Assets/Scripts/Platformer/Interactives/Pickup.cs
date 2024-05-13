@@ -38,6 +38,7 @@ public class Pickup : MonoBehaviour
 		// play sound effects if specified.
 		if (sfx != null && sfxSource != null) sfxSource.Play();
 
+
         // Update score if the other object is the player.
         if (other.CompareTag("Player"))
         {
