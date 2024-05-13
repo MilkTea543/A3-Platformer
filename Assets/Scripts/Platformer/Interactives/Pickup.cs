@@ -38,10 +38,25 @@ public class Pickup : MonoBehaviour
 		// play sound effects if specified.
 		if (sfx != null && sfxSource != null) sfxSource.Play();
 
-		// could instantiate a particle effect...
+        // Update score if the other object is the player.
+        if (other.CompareTag("Player"))
+        {
+            // Find the Score script on the Score GameObject and call AddScoreOnPickup method.
+            GameObject scoreObject = GameObject.Find("ScoreText");
+            if (scoreObject != null)
+            {
+                Score scoreScript = scoreObject.GetComponent<Score>();
+                if (scoreScript != null)
+                {
+                    scoreScript.AddScoreOnPickup();
+                }
+            }
+        }
 
-		// send messages as requested:
-		if (messageOther != "") other.SendMessage(messageOther);		// send a message to all scripts attached to other (the player / thing doing the picking up),
+        // could instantiate a particle effect...
+
+        // send messages as requested:
+        if (messageOther != "") other.SendMessage(messageOther);		// send a message to all scripts attached to other (the player / thing doing the picking up),
 		if (messageSelf != "") SendMessage(messageSelf);				// send a message to all scripts attached to me (the pickup),
 		if (messageBroadcast != "") BroadcastMessage(messageBroadcast); // send a message to all scripts attached to me and any children,
 		if (messageTarget != null && messageTargetMessage != "") messageTarget.SendMessage(messageTargetMessage); // send a message to a particular game object.
