@@ -273,16 +273,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   canDie: 1
-  scoreForKill: 100
-  hitPoints: 1
+  scoreForKill: 0
+  hitPoints: 0
   deadEnemy: {fileID: 21300000, guid: b1a98e1193ee34351ad2695419207690, type: 3}
   deathSpinMin: -100
   deathSpinMax: 100
   flipOnStart: 1
   instantKill: 0
+  explode: 0
   repeatDamagePeriod: 2
   hurtForceX: 300
   hurtForceY: 400
+  panDamage: 2
+  panResistant: 0
   behaviour: 1
   patrolType: 0
   arriveDistance: 0.3

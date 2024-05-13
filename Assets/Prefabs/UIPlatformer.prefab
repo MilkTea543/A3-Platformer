@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933d5565f22e34069b103031d4e8fa96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalLives: 3
-  livesPickup: 1
+  totalLives: 2
+  livesPickup: 0
 --- !u!1 &1115609694092090
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalHealth: 100
   clampHealth: 1
-  pickupHealth: 25
-  damage: 50
+  pickupHealth: 0
+  damage: 10
   bulletDamage: 5
   mineDamage: 20
 --- !u!1 &1356821268329010
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePrefix: 'Score: '
   totalPickups: 8
-  scoreForPickup: 10
+  scoreForPickup: 1
 --- !u!1 &1877884117196634
 GameObject:
   m_ObjectHideFlags: 0

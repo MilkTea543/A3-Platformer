@@ -37,7 +37,7 @@ public class Lives : MonoBehaviour
 
 		if (lives < 0)
 		{
-			Restart();
+			GameOver();
 			return;
 		}
 
@@ -64,8 +64,9 @@ public class Lives : MonoBehaviour
 	}
 
 
-	private void Restart ()
+	private void GameOver ()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
+        PlayerPrefs.SetInt("PreviousSceneIndex", SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("PlatformerGameOver");
+    }
 }

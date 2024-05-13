@@ -37,9 +37,9 @@ public class Score : MonoBehaviour
     }
 
     // killed a certain kind of enemy -- add score
-    public void AddScoreForEnemyKill(int enemyScore)
-    {
-        score += enemyScore;
-        UpdateScoreText();
-    }
+   //public void AddScoreForEnemyKill(int enemyScore)
+  //  {
+        //score += enemyScore;
+        //UpdateScoreText();
+  //  }
 }
