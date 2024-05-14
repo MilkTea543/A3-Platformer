@@ -30,4 +30,9 @@ public class DestroyOnShift : MonoBehaviour
             }
         }
     }
+    void panHit()
+    {
+        Debug.Log("broke");
+        Destroy(gameObject);
+    }
 }
