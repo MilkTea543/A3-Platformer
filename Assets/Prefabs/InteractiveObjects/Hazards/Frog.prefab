@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5507389784716879742}
   - component: {fileID: 2338106817054510186}
   - component: {fileID: 1750076840185479229}
+  - component: {fileID: 5670038359824915437}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Enemy
@@ -60,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3219010523960854234}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 63.227566, y: 9.55881, z: 0.004039316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -110,8 +111,8 @@ SpriteRenderer:
   m_SortingLayerID: -1131555221
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 496a9fef8b43b44f5bb18e666ab0515b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.56068087, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 169289079da8e57428c6a4325ae365fb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -153,18 +154,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.76}
+  m_Offset: {x: 0, y: -0.07}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.25, y: 1.25}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.076, y: 1.54}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.94, y: 1.33}
   m_EdgeRadius: 0
 --- !u!50 &5507389784716879742
 Rigidbody2D:
@@ -225,7 +226,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.45}
+  m_Offset: {x: 0, y: -0.1}
   serializedVersion: 2
   m_Radius: 0.45
 --- !u!114 &1750076840185479229
@@ -253,12 +254,35 @@ MonoBehaviour:
   repeatDamagePeriod: 2
   hurtForceX: 300
   hurtForceY: 400
-  behaviour: 2
+  panDamage: 2
+  panResistant: 0
+  behaviour: 0
   patrolType: 0
   arriveDistance: 0.3
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!95 &5670038359824915437
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3219010523960854234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 696b6528e3f3381429b410bc4b31eb1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3876919621341949437
 GameObject:
   m_ObjectHideFlags: 0
