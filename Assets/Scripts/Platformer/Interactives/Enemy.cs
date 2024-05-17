@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
 	public float moveSpeed;
-	public bool canDie = false;					// Can the enemy be killed?
+	public bool canDieByJump = false;					// Can the enemy be killed?
 	public int scoreForKill = 100;				// How many points is killing an enemy worth?
 	public int hitPoints = 1;					// How many times can the enemy be hurt before it dies?
 	public Sprite deadEnemy;					// A sprite of the enemy when it's dead.
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
 		// If the colliding gameobject is an Enemy, look at if we should take damage...  (NB - only once per "contact" - then enemy & player are separated)
 		if (other.gameObject.tag == "Player")
 		{
-            if ((other.transform.position.y > topCheck.position.y) && canDie)
+            if ((other.transform.position.y > topCheck.position.y) && canDieByJump)
             {
                 // player is hitting from above...
                 hitPoints--;

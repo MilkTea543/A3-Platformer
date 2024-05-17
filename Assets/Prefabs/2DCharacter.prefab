@@ -200,9 +200,9 @@ MonoBehaviour:
   m_MaxSustainedJumpSpeed: 5
   m_Accel: 30
   m_AirAccel: 20
-  m_JumpForce: 700
+  m_JumpForce: 600
   m_JumpForces:
-  - 400
+  - 500
   m_JumpSustainedForce: 30
   m_JumpSustainedForces:
   - 300

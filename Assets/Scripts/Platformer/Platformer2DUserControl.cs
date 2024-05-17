@@ -51,6 +51,7 @@ namespace UnityStandardAssets._2D
             {
                 if (reverseTimer > 0)
                 {
+                    m_Renderer.color = Color.red;
                     reverseTimer -= Time.deltaTime;
                     return;
                 }
