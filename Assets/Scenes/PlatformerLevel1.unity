@@ -461,11 +461,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.799579
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.909637
+      value: 41.91
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -491,6 +491,18 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 1862723218}
+    - target: {fileID: 11400000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
+      propertyPath: m_UpdateType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
+      propertyPath: m_FollowVelocity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3127,6 +3139,21 @@ PrefabInstance:
       propertyPath: behaviour
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1750076840185479229, guid: 97657c5392fd34942b6184d3c276eb21,
+        type: 3}
+      propertyPath: canDieByJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750076840185479229, guid: 97657c5392fd34942b6184d3c276eb21,
+        type: 3}
+      propertyPath: panResistant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750076840185479229, guid: 97657c5392fd34942b6184d3c276eb21,
+        type: 3}
+      propertyPath: scoreForKill
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2338106817054510186, guid: 97657c5392fd34942b6184d3c276eb21,
         type: 3}
       propertyPath: m_Offset.y
@@ -3432,6 +3459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4998011852685558569, guid: 6938e84c0a89254499576cdb0b44f1ec,
         type: 3}
+      propertyPath: canDieByJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998011852685558569, guid: 6938e84c0a89254499576cdb0b44f1ec,
+        type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1716474539}
@@ -3715,37 +3747,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca4c5d6ff9467e44bac95dfcb274a63, type: 3}
---- !u!1 &1326930500
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1326930501}
-  m_Layer: 0
-  m_Name: Checkpoints
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1326930501
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326930500}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1370077466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3758,6 +3759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviour
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750076840185479229, guid: 97657c5392fd34942b6184d3c276eb21,
+        type: 3}
+      propertyPath: canDieByJump
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2338106817054510186, guid: 97657c5392fd34942b6184d3c276eb21,
         type: 3}
@@ -5540,6 +5546,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4998011852685558569, guid: 6938e84c0a89254499576cdb0b44f1ec,
         type: 3}
+      propertyPath: canDieByJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998011852685558569, guid: 6938e84c0a89254499576cdb0b44f1ec,
+        type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1420028030}
@@ -6057,7 +6068,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 618110117}
   - {fileID: 2041748641}
-  - {fileID: 1326930501}
   - {fileID: 129327263}
   - {fileID: 1976895595}
   - {fileID: 279295736}

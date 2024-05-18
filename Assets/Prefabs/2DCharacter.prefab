@@ -343,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 6188950085186971391, guid: 6124585accb93ed45922bd30bb34b63a, type: 3}
   useKey: 304
-  attackRange: {x: 1, y: 0, z: 0}
+  attackRange: {x: 0.6, y: -0.5, z: 0}
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0

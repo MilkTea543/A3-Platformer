@@ -14,31 +14,41 @@ public class TriggerEnter : MonoBehaviour
 	[TooltipAttribute("The method name to call with SendMessage. The message is sent to all script componenets attached to target (messageTarget) on enter.")]
 	[SerializeField] private string messageTargetMessage = null;		// The method name to call with SendMessage. The message is sent to all script componenets attached to target (messageTarget) on enter.
 	[TooltipAttribute("The tag to filter collisions.")]
-	[SerializeField] private string filterTag = null;					// The tag to filter collisions.
+	[SerializeField] private string filterTag = null;                   // The tag to filter collisions.
 
+    private GameObject pitcher;  // Reference to the Pitcher game object
 
-	// action whilst colliding
-	void OnTriggerEnter2D(Collider2D other)
+    void Start()
+    {
+        // Find the Pitcher game object in the scene
+        pitcher = GameObject.Find("Pitcher");
+    }
+
+    // action whilst colliding
+    void OnTriggerEnter2D(Collider2D other)
 	{
 		// you could check other.tag == "Player" to be sure, however it should not be necessary
 		// you should have 2D physics matrix (Edit/Project Settings/Physics2D) set up so that player is the only valid "other"
-
-		// Do we have a filter tag...
-		if (filterTag != "")
+		// Check if the Pitcher game object is destroyed
+		if (pitcher == null)
 		{
-			//... and did we just collide with an object with the filter tag...
-			if (other.tag == filterTag)
+			// Do we have a filter tag...
+			if (filterTag != "")
 			{
-				//print ("Entered " + name);
+				//... and did we just collide with an object with the filter tag...
+				if (other.tag == filterTag)
+				{
+					//print ("Entered " + name);
 
-				// send messages as requested
+					// send messages as requested
+					ProcessMessage(other);
+				}
+			}
+			else
+			{
+				// No filter tag? Send Message(s)
 				ProcessMessage(other);
 			}
-		}
-		else
-		{
-			// No filter tag? Send Message(s)
-			ProcessMessage(other);
 		}
 	}
 
