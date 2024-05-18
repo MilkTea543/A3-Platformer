@@ -273,6 +273,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11493558, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493558, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493558, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22405856, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.3387
@@ -584,7 +596,7 @@ PrefabInstance:
     - {fileID: 108622, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
     - {fileID: 123628, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 22439792, guid: 45616935e4fe10f48b62da1347801a16,
+    - targetCorrespondingSourceObject: {fileID: 22447698, guid: 45616935e4fe10f48b62da1347801a16,
         type: 3}
       insertIndex: 0
       addedObject: {fileID: 1217145738}
@@ -630,12 +642,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!224 &27596710 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 22439792, guid: 45616935e4fe10f48b62da1347801a16,
-    type: 3}
-  m_PrefabInstance: {fileID: 27596707}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &336479502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -726,7 +732,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.13725491, g: 0.08235294, b: 0.22352943, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -812,12 +818,12 @@ RectTransform:
   m_LocalScale: {x: 20.87, y: 20.87, z: 20.87}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 27596710}
+  m_Father: {fileID: 1593304161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0019226, y: -0.0014648}
-  m_SizeDelta: {x: 34.499, y: 19.406}
+  m_AnchoredPosition: {x: -0.0017023, y: -0.00017452}
+  m_SizeDelta: {x: 36.272, y: 20.412}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217145739
 MonoBehaviour:
@@ -857,6 +863,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217145737}
   m_CullTransparentMesh: 1
+--- !u!224 &1593304161 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 22447698, guid: 45616935e4fe10f48b62da1347801a16,
+    type: 3}
+  m_PrefabInstance: {fileID: 27596707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &2072558097
 LightingSettings:
   m_ObjectHideFlags: 0
