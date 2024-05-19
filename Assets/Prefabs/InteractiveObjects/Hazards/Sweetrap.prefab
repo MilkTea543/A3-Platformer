@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8488941505838339684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TopCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4702841278004535941}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FrontCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,8 @@ GameObject:
   - component: {fileID: 7268229046621676639}
   - component: {fileID: 5416631944304689702}
   - component: {fileID: 7953694116553703375}
-  m_Layer: 0
+  - component: {fileID: -1308618513587065823}
+  m_Layer: 11
   m_Name: Sweetrap
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -274,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  canDie: 1
+  canDieByJump: 0
   scoreForKill: 100
   hitPoints: 1
   deadEnemy: {fileID: 21300000, guid: b1a98e1193ee34351ad2695419207690, type: 3}
@@ -288,12 +289,16 @@ MonoBehaviour:
   hurtForceY: 400
   panDamage: 2
   panResistant: 0
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColorDuration: 0.5
   behaviour: 0
   patrolType: 0
   arriveDistance: 0.3
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!114 &5416631944304689702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,3 +335,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1308618513587065823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925058902777753642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d881603040445d24d8f11d79e7894e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerDuration: 0.5
+  flickerInterval: 0.1
+  flickerColor: {r: 1, g: 0, b: 0, a: 1}

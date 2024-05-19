@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 8111441004224633730}
   - component: {fileID: 3071005506359664690}
   - component: {fileID: 9095316201487278929}
-  m_Layer: 0
+  - component: {fileID: -3954248438888790261}
+  m_Layer: 11
   m_Name: InsectSwarm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -226,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  canDie: 1
+  canDieByJump: 0
   scoreForKill: 100
   hitPoints: 1
   deadEnemy: {fileID: 0}
@@ -240,10 +241,14 @@ MonoBehaviour:
   hurtForceY: 30
   panDamage: 2
   panResistant: 0
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColorDuration: 0.5
   behaviour: 0
   patrolType: 0
   arriveDistance: 0.3
   patrolPoints: []
+  enemyPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!95 &9095316201487278929
 Animator:
   serializedVersion: 5
@@ -265,6 +270,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3954248438888790261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302927032423523497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d881603040445d24d8f11d79e7894e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerDuration: 0.1
+  flickerInterval: 0.1
+  flickerColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &3198627973652818926
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7554378528186340997}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FrontCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4231428177716863726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TopCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6467944994864989342}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TopCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5152579835883413253}
   - component: {fileID: 7613279489068403642}
   - component: {fileID: 2230153193074054366}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pitcher
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ MonoBehaviour:
   moveSpeed: 0
   canDieByJump: 0
   scoreForKill: 0
-  hitPoints: 10
+  hitPoints: 7
   deadEnemy: {fileID: 0}
   deathSpinMin: -100
   deathSpinMax: 100
@@ -295,7 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7098941093938903347}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FrontCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7498238244041259807}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

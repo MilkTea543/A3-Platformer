@@ -14,9 +14,10 @@ public class Pickup : MonoBehaviour
 	[TooltipAttribute("The GameObject to call SendMessage on. The message is sent to all script components attached to target.")]
 	[SerializeField] private GameObject messageTarget = null; 		// The Game Object to call SendMessage on. The message is sent to all script components attached to target.
 	[TooltipAttribute("The method name to call with SendMessage. The message is sent to all script componenets attached to target (messageTarget).")]
-	[SerializeField] private string messageTargetMessage = null;	// The method name to call with SendMessage. The message is sent to all script componenets attached to target (messageTarget).
+	[SerializeField] private string messageTargetMessage = null;    // The method name to call with SendMessage. The message is sent to all script componenets attached to target (messageTarget).
 
-	private AudioSource sfxSource;				// Reference to pickup's Audio Source component.
+
+    private AudioSource sfxSource;				// Reference to pickup's Audio Source component.
 
 
 	void Awake()
@@ -42,6 +43,8 @@ public class Pickup : MonoBehaviour
         // Update score if the other object is the player.
         if (other.CompareTag("Player"))
         {
+            IngredientManager.Instance.CollectIngredient(gameObject);
+
             // Find the Score script on the Score GameObject and call AddScoreOnPickup method.
             GameObject scoreObject = GameObject.Find("ScoreText");
             if (scoreObject != null)
