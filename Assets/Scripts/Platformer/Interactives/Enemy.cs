@@ -284,8 +284,8 @@ public class Enemy : MonoBehaviour
         ren.sprite = deadEnemy;
 
         // Increase the score by scoreForKill points
-        GameObject s = GameObject.Find("ScoreText");
-        if (s != null) s.SendMessage("AddScoreForEnemyKill", scoreForKill);
+        //GameObject s = GameObject.Find("ScoreText");
+        //if (s != null) s.SendMessage("AddScoreForEnemyKill", scoreForKill);
 
         // Set dead to true.
         dead = true;

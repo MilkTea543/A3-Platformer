@@ -43,7 +43,7 @@ public class Pickup : MonoBehaviour
         // Update score if the other object is the player.
         if (other.CompareTag("Player"))
         {
-            IngredientManager.Instance.CollectIngredient(gameObject);
+			IngredientManager.Instance.CollectIngredient(gameObject); 
 
             // Find the Score script on the Score GameObject and call AddScoreOnPickup method.
             GameObject scoreObject = GameObject.Find("ScoreText");
