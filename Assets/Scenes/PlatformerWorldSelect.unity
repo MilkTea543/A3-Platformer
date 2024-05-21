@@ -498,6 +498,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22308868, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 555202460}
+    - target: {fileID: 22308868, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22405856, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.3387
@@ -819,7 +827,7 @@ PrefabInstance:
     - {fileID: 136786, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
     - {fileID: 156880, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 22434976, guid: 45616935e4fe10f48b62da1347801a16,
+    - targetCorrespondingSourceObject: {fileID: 22447698, guid: 45616935e4fe10f48b62da1347801a16,
         type: 3}
       insertIndex: 0
       addedObject: {fileID: 1795314275}
@@ -888,16 +896,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795314274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
-  m_LocalScale: {x: 20.87, y: 20.87, z: 20.87}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2074494507}
+  m_Father: {fileID: 1975082118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200.55293, y: 123.46748}
-  m_SizeDelta: {x: 36.272, y: 20.412}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795314276
 MonoBehaviour:
@@ -937,9 +945,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795314274}
   m_CullTransparentMesh: 1
---- !u!224 &2074494507 stripped
+--- !u!224 &1975082118 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 22434976, guid: 45616935e4fe10f48b62da1347801a16,
+  m_CorrespondingSourceObject: {fileID: 22447698, guid: 45616935e4fe10f48b62da1347801a16,
     type: 3}
   m_PrefabInstance: {fileID: 1715158139}
   m_PrefabAsset: {fileID: 0}
