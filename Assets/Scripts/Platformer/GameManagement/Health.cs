@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
     private float health = 0;
     private Text healthText;
     private GameObject player;
+    public ParticleSystem damageEffect;
+
 
     void Awake()
     {
@@ -24,6 +26,10 @@ public class Health : MonoBehaviour
         health = totalHealth;
         healthText.text = "Health: " + (int)health;
         player = GameObject.FindGameObjectWithTag("Player");
+        if (damageEffect == null)
+        {
+            Debug.LogError("Damage effect particle system is not assigned!");
+        }
     }
 
     public void LoseAllHealth()
@@ -53,6 +59,10 @@ public class Health : MonoBehaviour
     public void SubtractHealthOnHit()
     {
         health -= damage;
+        if (damageEffect != null)
+        {
+            damageEffect.Play();
+        }
         CheckHealth();
         if (health < 0)
             health = 0;

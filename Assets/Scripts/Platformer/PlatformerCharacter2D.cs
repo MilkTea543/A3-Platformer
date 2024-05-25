@@ -54,6 +54,7 @@ namespace UnityStandardAssets._2D
         private bool m_Dead = false;
         private UnityStandardAssets.Cameras.AutoCam m_AutoCam;
 
+
         #region SlimeSetup
         [SerializeField] private bool m_SlimeTemporary = false;                   // Sets the slime effect to last for a set duration at full intensity
         [SerializeField] private float m_SlimeTempDuration = 5f;                   // Sets the duration of the slimed effect.
@@ -130,6 +131,7 @@ namespace UnityStandardAssets._2D
             m_SpriteRenderer = GetComponent<SpriteRenderer>();
 
             DefaultRigidBodySettings();     // Setting the defaults for Rigidbody mass etc.
+                                            // Existing initialization code
         }
 
 
@@ -432,7 +434,8 @@ namespace UnityStandardAssets._2D
 
         public void Hurt ()
 		{
-			m_HurtTimer = m_HurtTime;
+            
+            m_HurtTimer = m_HurtTime;
 			m_Hurt = true;
 		}
 
