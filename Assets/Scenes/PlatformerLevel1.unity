@@ -1992,6 +1992,11 @@ PrefabInstance:
       propertyPath: messageTarget
       value: 
       objectReference: {fileID: 1143197080}
+    - target: {fileID: 114881214649766428, guid: 0c401e746061c4013867f6e7c2d1f678,
+        type: 3}
+      propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 1143197080}
     - target: {fileID: 212368143562904452, guid: 0c401e746061c4013867f6e7c2d1f678,
         type: 3}
       propertyPath: m_SortingOrder
