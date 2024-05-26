@@ -8,8 +8,14 @@ public class Bounce : MonoBehaviour
 	[SerializeField] private Vector2 bounceForce = new Vector2(0f, 500f);	// The Vector 2 (x,y) force to apply using AddForce.
 	[TooltipAttribute("The tag string to filter collisions.")]
 	[SerializeField] private string filterTag = null;								// The tag string to filter colissions.
-
-
+	private AudioClip sfx = null;	
+	private AudioSource sfxSource;
+	
+	void Awake ()
+	{
+	    sfxSource = this.gameObject.GetComponent<AudioSource>();
+		if (sfx != null && sfxSource != null) sfxSource.clip = sfx;	
+	}
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		// Do we have a filter tag...
@@ -19,6 +25,7 @@ public class Bounce : MonoBehaviour
 			if (other.tag == filterTag)
 			{
 				// ...apply bounce.
+				if (sfx != null && sfxSource != null) sfxSource.Play();
 				BounceRigidbody(other.GetComponent<Rigidbody2D>());
 			}
 		}
