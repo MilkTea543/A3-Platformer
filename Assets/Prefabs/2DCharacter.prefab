@@ -342,9 +342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b860d505d2365e247abfb0c360605817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitbox: {fileID: 6188950085186971391, guid: 6124585accb93ed45922bd30bb34b63a, type: 3}
+  hitboxL: {fileID: 6188950085186971391, guid: 87e4558797b93544c868a93a29e19c9a, type: 3}
+  hitboxR: {fileID: 6188950085186971391, guid: 6124585accb93ed45922bd30bb34b63a, type: 3}
   useKey: 304
   attackRange: {x: 0.6, y: 0, z: 0}
+  attackTime: 0.4
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0

@@ -607,6 +607,11 @@ PrefabInstance:
       propertyPath: m_UpdateType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8303593864664309899, guid: baec086904791744185aaa07a6cf55c2,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class FryingPan : MonoBehaviour
 {
-    public Transform hitbox;
+    public Transform hitboxL;
+    public Transform hitboxR;
     public KeyCode useKey = KeyCode.LeftShift;  // The key used to trigger destruction
     public Vector3 attackRange;
     private bool killEnabled = false;
+    private float timeUntilHit;
+    public float attackTime;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-
+        timeUntilHit = attackTime;
     }
     public void AddFryingPan()
     {
@@ -25,15 +26,21 @@ public class FryingPan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timeUntilHit >= 0) {
+            timeUntilHit -= Time.deltaTime;
+            return;
+        }
         if (Input.GetKeyDown(useKey) & (killEnabled) & transform.localScale.x >= 1)
         {
             Debug.Log("hurt");
-            Instantiate(hitbox, transform.position + attackRange, transform.rotation);
+            Instantiate(hitboxR, transform.position + attackRange, transform.rotation);
+            timeUntilHit = attackTime;
         }
         if (Input.GetKeyDown(useKey) & (killEnabled) & transform.localScale.x <= 1)
         {
             Debug.Log("hurt");
-            Instantiate(hitbox, transform.position - attackRange, transform.rotation);
+            Instantiate(hitboxL, transform.position - attackRange, transform.rotation);
+            timeUntilHit = attackTime;
         }
     }
 }
