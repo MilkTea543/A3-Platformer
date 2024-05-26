@@ -2537,6 +2537,11 @@ PrefabInstance:
       propertyPath: bulletDamage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114711554325973182, guid: 469d0c17a422c4472a68cd2af8da4612,
+        type: 3}
+      propertyPath: damageEffect
+      value: 
+      objectReference: {fileID: 1910943028}
     - target: {fileID: 223708586413672200, guid: 469d0c17a422c4472a68cd2af8da4612,
         type: 3}
       propertyPath: m_Camera
@@ -7403,13 +7408,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: -2.401657
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4353473
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 89.158745
+      value: 88.7897
       objectReference: {fileID: 0}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.178875
+      value: 30.2562
       objectReference: {fileID: 0}
     - target: {fileID: 3963075517536796388, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
         type: 3}
@@ -8118,6 +8133,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
+--- !u!198 &1910943028 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8480690095472496758, guid: 87a2357765801c34292d6718d8b4d770,
+    type: 3}
+  m_PrefabInstance: {fileID: 1910943027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1911813265
 PrefabInstance:
   m_ObjectHideFlags: 0
