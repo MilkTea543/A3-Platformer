@@ -1022,6 +1022,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_Target
       value: 
@@ -1361,13 +1365,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.76
+      value: 14.766
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08
+      value: 0.358
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1404,6 +1412,11 @@ PrefabInstance:
     - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
         type: 3}
       propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1449,15 +1462,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.44
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.38
+      value: 7.35
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1491,9 +1504,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -177.8
       objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.0603514
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.02762042
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.8220653
+      objectReference: {fileID: 0}
     - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
         type: 3}
       propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 212918701902081862, guid: 70ca774bf2f35499db555528582ce189,
@@ -1875,6 +1908,16 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 58114744732758184, guid: 87a2357765801c34292d6718d8b4d770,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58114744732758184, guid: 87a2357765801c34292d6718d8b4d770,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 61793950238043444, guid: 87a2357765801c34292d6718d8b4d770,
         type: 3}
       propertyPath: m_Size.y
@@ -2027,7 +2070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_RootOrder
@@ -2065,9 +2108,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.1
       objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.8787636
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.088549994
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.64159995
+      objectReference: {fileID: 0}
     - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
         type: 3}
       propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2425,6 +2488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.x
       value: 46.8
@@ -2465,6 +2532,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.3288469
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.086203575
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.091685295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2496,7 +2583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_RootOrder
@@ -2534,9 +2621,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.4751318
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.091129914
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.23795733
+      objectReference: {fileID: 0}
     - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
         type: 3}
       propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2921,7 +3028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_RootOrder
@@ -2962,6 +3069,11 @@ PrefabInstance:
     - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
         type: 3}
       propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3068,7 +3180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_RootOrder
@@ -3106,9 +3218,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.485061
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.091181904
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.24788626
+      objectReference: {fileID: 0}
     - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
         type: 3}
       propertyPath: messageTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3279,6 +3411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 1915782165784066, guid: 70ca774bf2f35499db555528582ce189, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.3
@@ -3318,6 +3454,26 @@ PrefabInstance:
     - target: {fileID: 4822839051037638, guid: 70ca774bf2f35499db555528582ce189, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2545519
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.086203575
+      objectReference: {fileID: 0}
+    - target: {fileID: 58732761196603326, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.017390251
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709124418401848, guid: 70ca774bf2f35499db555528582ce189,
+        type: 3}
+      propertyPath: messageTargetMessage
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

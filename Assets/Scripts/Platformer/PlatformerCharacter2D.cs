@@ -13,6 +13,8 @@ namespace UnityStandardAssets._2D
         [SerializeField] private bool m_MidAirJump = false;                         // Whether or not a player can jump while in the air.
         [SerializeField] private int m_MidAirJumpCount = 1;                         // Amount of mid air jumps the player can perform.
         [SerializeField] private bool m_AltMidAirJumpForce = false;                 // Whether or not an alternative mid air jump force is used while mid air jumping.
+    
+
         private enum ApplyMoveForce {Instantaneous = 0, Additive = 1};
         [SerializeField, HideInInspector] private ApplyMoveForce m_ApplyMoveForce = ApplyMoveForce.Instantaneous;
         [SerializeField] private float m_MaxSpeed = 10f;                            // The fastest the player can travel in the x axis.
@@ -56,6 +58,8 @@ namespace UnityStandardAssets._2D
 
 
         #region SlimeSetup
+        public Collider2D standingCollider;
+        public Collider2D crouchingCollider;
         [SerializeField] private bool m_SlimeTemporary = false;                   // Sets the slime effect to last for a set duration at full intensity
         [SerializeField] private float m_SlimeTempDuration = 5f;                   // Sets the duration of the slimed effect.
         [SerializeField] private Color m_SlimeTint = new Color(0f, 1f, 0f, 1f);    // Sets the colour of the slimed effect on the player.
@@ -624,6 +628,15 @@ namespace UnityStandardAssets._2D
                 m_DashAudioSource.pitch = UnityEngine.Random.Range(0.85f, 1.10f);
                 m_DashAudioSource.Play();
             }
+        }
+        public bool IsStandingCollider(Collider2D collider)
+        {
+            return collider == standingCollider;
+        }
+
+        public bool IsCrouchingCollider(Collider2D collider)
+        {
+            return collider == crouchingCollider;
         }
     }
 }
