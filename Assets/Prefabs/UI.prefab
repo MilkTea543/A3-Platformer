@@ -4285,8 +4285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6575c13371fd4cbcba0652f2092d1c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleMusic: {fileID: 8300000, guid: 7db0c87ec4fdb0e48af04349c4f14df9, type: 3}
-  mainMusic: {fileID: 8300000, guid: b065296f4dccc4f2d9ca8a4b9dd17cd9, type: 3}
+  titleMusic: {fileID: 8300000, guid: 6f1cbf916ec778343bc11e6c730f4587, type: 3}
+  mainMusic: {fileID: 8300000, guid: b27f1caa9d8ce3c49ad8ab51d49449bc, type: 3}
+  gameOver: {fileID: 8300000, guid: 8e462e06ab54e5141b2a90441072b965, type: 3}
   volumeDown: {fileID: 24519918, guid: 0ac7fb39e445048d89688f69c2a1839a, type: 2}
   volumeUp: {fileID: 24500003, guid: 0ac7fb39e445048d89688f69c2a1839a, type: 2}
 --- !u!114 &6576688019797750483
