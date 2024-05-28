@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace UnityStandardAssets._2D
@@ -13,7 +14,8 @@ namespace UnityStandardAssets._2D
         [SerializeField] private bool m_MidAirJump = false;                         // Whether or not a player can jump while in the air.
         [SerializeField] private int m_MidAirJumpCount = 1;                         // Amount of mid air jumps the player can perform.
         [SerializeField] private bool m_AltMidAirJumpForce = false;                 // Whether or not an alternative mid air jump force is used while mid air jumping.
-    
+        private bool isClimbing;
+
 
         private enum ApplyMoveForce {Instantaneous = 0, Additive = 1};
         [SerializeField, HideInInspector] private ApplyMoveForce m_ApplyMoveForce = ApplyMoveForce.Instantaneous;
@@ -328,7 +330,6 @@ namespace UnityStandardAssets._2D
                     Flip();
                 }
             }
-
 
             // If the player should jump...
             if (m_Grounded && jump && m_Anim.GetBool("Ground"))

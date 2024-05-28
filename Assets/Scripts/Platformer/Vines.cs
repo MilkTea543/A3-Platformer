@@ -4,13 +4,16 @@ public class Vines : MonoBehaviour
 {
     public float climbSpeed = 3f;
     public Transform climbPoint;
+    public Animator playerAnimator;
 
     private bool isPlayerInRange;
     private Rigidbody2D playerRigidbody;
 
     void Start()
     {
-        playerRigidbody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        playerRigidbody = player.GetComponent<Rigidbody2D>();
+        playerAnimator = player.GetComponent<Animator>();
     }
 
     void Update()
@@ -23,16 +26,28 @@ public class Vines : MonoBehaviour
             {
                 Vector2 climbVelocity = new Vector2(playerRigidbody.velocity.x, verticalInput * climbSpeed);
                 playerRigidbody.velocity = climbVelocity;
+
+                // Set IsClimbing parameter in animator
+                playerAnimator.SetBool("IsClimbing", true);
+                playerAnimator.SetBool("IsIdle", false);
+                playerAnimator.SetBool("IsCrouching", false);
+
+
             }
-            else if (Input.GetKeyDown(KeyCode.W))
+            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
             {
-                // Climb up the ladder
-                Vector2 climbVelocity = new Vector2(playerRigidbody.velocity.x, climbSpeed);
+                // Climb up or down the vine
+                Vector2 climbVelocity = new Vector2(playerRigidbody.velocity.x, verticalInput * climbSpeed);
                 playerRigidbody.velocity = climbVelocity;
+
+                // Set IsClimbing parameter in animator
+                playerAnimator.SetBool("IsClimbing", true);
+                playerAnimator.SetBool("IsIdle", false);
+                playerAnimator.SetBool("IsCrouching", false);
             }
             else
             {
-                // Stop climbing
+                // Maintain the climb animation even if the player is stationary on the vine
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
             }
         }
@@ -51,8 +66,12 @@ public class Vines : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            // Stop climbing when leaving the ladder
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
+
+            // Set IsClimbing to false to stop climbing animation
+            playerAnimator.SetBool("IsClimbing", false);
+            playerAnimator.SetBool("IsIdle", true);
+            playerAnimator.SetBool("IsCrouching", true);
         }
     }
 
