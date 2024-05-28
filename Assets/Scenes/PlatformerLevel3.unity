@@ -633,6 +633,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &125937758
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1143180436668962826, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 143.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143180436668962826, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8741302
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117146520068694243, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917981596172608167, guid: 7811b170e56092348b1be3751f60a156,
+        type: 3}
+      propertyPath: m_Name
+      value: Fireflies
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7811b170e56092348b1be3751f60a156, type: 3}
 --- !u!1 &129327262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,11 +1225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.51
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.35
+      value: 15.9
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4721,6 +4799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Disorientating Vines (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651456931140815040, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10275,6 +10358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Disorientating Vines (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6651456931140815040, guid: 88ab18d379e0c1d4fab44e48637a4dc8,
+        type: 3}
+      propertyPath: m_TagString
+      value: DV
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15742,11 +15830,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.51
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.35
+      value: 15.9
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17623,6 +17711,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1910943027}
+  - {fileID: 125937758}
   - {fileID: 279295736}
   - {fileID: 2041748641}
   - {fileID: 129327263}

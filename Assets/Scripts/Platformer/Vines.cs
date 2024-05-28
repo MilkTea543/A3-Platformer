@@ -8,12 +8,14 @@ public class Vines : MonoBehaviour
 
     private bool isPlayerInRange;
     private Rigidbody2D playerRigidbody;
+    private AudioSource vineAudioSource;
 
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerRigidbody = player.GetComponent<Rigidbody2D>();
         playerAnimator = player.GetComponent<Animator>();
+        vineAudioSource = GetComponentInChildren<AudioSource>();
     }
 
     void Update()
@@ -32,23 +34,22 @@ public class Vines : MonoBehaviour
                 playerAnimator.SetBool("IsIdle", false);
                 playerAnimator.SetBool("IsCrouching", false);
 
-
-            }
-            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
-            {
-                // Climb up or down the vine
-                Vector2 climbVelocity = new Vector2(playerRigidbody.velocity.x, verticalInput * climbSpeed);
-                playerRigidbody.velocity = climbVelocity;
-
-                // Set IsClimbing parameter in animator
-                playerAnimator.SetBool("IsClimbing", true);
-                playerAnimator.SetBool("IsIdle", false);
-                playerAnimator.SetBool("IsCrouching", false);
+                // Play vine climbing sound
+                if (!vineAudioSource.isPlaying)
+                {
+                    vineAudioSource.Play();
+                }
             }
             else
             {
                 // Maintain the climb animation even if the player is stationary on the vine
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
+
+                // Stop vine climbing sound if player is stationary
+                if (vineAudioSource.isPlaying)
+                {
+                    vineAudioSource.Stop();
+                }
             }
         }
     }
@@ -72,6 +73,12 @@ public class Vines : MonoBehaviour
             playerAnimator.SetBool("IsClimbing", false);
             playerAnimator.SetBool("IsIdle", true);
             playerAnimator.SetBool("IsCrouching", true);
+
+            // Stop vine climbing sound
+            if (vineAudioSource.isPlaying)
+            {
+                vineAudioSource.Stop();
+            }
         }
     }
 

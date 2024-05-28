@@ -17,16 +17,22 @@ namespace UnityStandardAssets._2D
         public bool reverse;
         public bool panEquipped = false;
         private GameObject messageBranch = null;
-        
+
+
 
         private SpriteRenderer m_Renderer;  // Reference to the SpriteRenderer component
 
+
         private void Awake()
         {
+
             m_Character = GetComponent<PlatformerCharacter2D>();
             m_Renderer = GetComponent<SpriteRenderer>();
             reverseTimer = reverseSpan;
             messageBranch = GameObject.FindGameObjectWithTag("BranchWalls");
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+
         }
 
         private void Update()
@@ -54,10 +60,8 @@ namespace UnityStandardAssets._2D
                     m_Renderer.color = Color.red;
                     reverseTimer -= Time.deltaTime;
                     return;
+
                 }
-                reverse = false;
-                m_Renderer.color = Color.white;
-                reverseTimer = reverseSpan;
             }
         }
         public void reverseTrue() {
@@ -84,6 +88,7 @@ namespace UnityStandardAssets._2D
             // Read the inputs.
             bool crouch = Input.GetKey(KeyCode.S);
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            
             if (reverse)
             {
                 h = -CrossPlatformInputManager.GetAxis("Horizontal");  // When reverse is true, horizontal inputs go in opposite directions
@@ -95,4 +100,5 @@ namespace UnityStandardAssets._2D
             m_Dash = false;
         }
     }
+
 }

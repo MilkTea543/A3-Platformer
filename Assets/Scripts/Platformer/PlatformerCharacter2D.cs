@@ -14,7 +14,6 @@ namespace UnityStandardAssets._2D
         [SerializeField] private bool m_MidAirJump = false;                         // Whether or not a player can jump while in the air.
         [SerializeField] private int m_MidAirJumpCount = 1;                         // Amount of mid air jumps the player can perform.
         [SerializeField] private bool m_AltMidAirJumpForce = false;                 // Whether or not an alternative mid air jump force is used while mid air jumping.
-        private bool isClimbing;
 
 
         private enum ApplyMoveForce {Instantaneous = 0, Additive = 1};
@@ -57,6 +56,7 @@ namespace UnityStandardAssets._2D
         private bool m_Hurt = false;
         private bool m_Dead = false;
         private UnityStandardAssets.Cameras.AutoCam m_AutoCam;
+
 
 
         #region SlimeSetup
@@ -106,6 +106,9 @@ namespace UnityStandardAssets._2D
         private float m_curDashTime = 0f;               // m_curDashTime is a temp variable - a counter
         private float m_curDashSpeedMultiplier = 1f;    // When dash is in effect, the move speed in air or ground will be multiplied by this value. This is a temp variable because we may want to fade the value over time for a gradual deceleration.
         private AudioSource m_DashAudioSource;    // Reference to the player's mid air jump audio source.
+        private AudioSource runningAudioSource;
+        private AudioSource crouchingAudioSource;
+
         #endregion
 
         public void OnValidate()
@@ -131,6 +134,7 @@ namespace UnityStandardAssets._2D
             m_JumpAudioSource = transform.Find("JumpAudioSource").GetComponent<AudioSource>();
             m_MidAirJumpAudioSource = transform.Find("MidAirJumpAudioSource").GetComponent<AudioSource>();
             m_DashAudioSource = transform.Find("DashAudioSource").GetComponent<AudioSource>();
+
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             m_AutoCam = GameObject.Find("MultipurposeCameraRig").GetComponent<UnityStandardAssets.Cameras.AutoCam>();
