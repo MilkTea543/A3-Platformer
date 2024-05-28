@@ -17,6 +17,7 @@ namespace UnityStandardAssets._2D
         public bool reverse;
         public bool panEquipped = false;
         private GameObject messageBranch = null;
+        public Animator playerAnimator;
 
 
 
@@ -31,6 +32,7 @@ namespace UnityStandardAssets._2D
             reverseTimer = reverseSpan;
             messageBranch = GameObject.FindGameObjectWithTag("BranchWalls");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
+            playerAnimator = player.GetComponent<Animator>();
 
 
         }
@@ -46,7 +48,7 @@ namespace UnityStandardAssets._2D
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
                 m_SustainJump = CrossPlatformInputManager.GetButton("Jump");
             }
-            
+
             if (!m_Dash)
             {
                 // Read the dash input (Fire2 is right shift)
@@ -60,16 +62,20 @@ namespace UnityStandardAssets._2D
                     m_Renderer.color = Color.red;
                     reverseTimer -= Time.deltaTime;
                     return;
-
                 }
+                reverse = false;
+                m_Renderer.color = Color.white;
+                reverseTimer = reverseSpan;
             }
         }
-        public void reverseTrue() {
-            if (!reverse) {
+        public void reverseTrue()
+        {
+            if (!reverse)
+            {
                 reverse = true;
             }
         }
-          public void AddFryingPan()
+        public void AddFryingPan()
         {
             panEquipped = true;
             messageBranch.SendMessage("bwEnable");
@@ -88,7 +94,7 @@ namespace UnityStandardAssets._2D
             // Read the inputs.
             bool crouch = Input.GetKey(KeyCode.S);
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            
+
             if (reverse)
             {
                 h = -CrossPlatformInputManager.GetAxis("Horizontal");  // When reverse is true, horizontal inputs go in opposite directions
@@ -100,5 +106,4 @@ namespace UnityStandardAssets._2D
             m_Dash = false;
         }
     }
-
 }

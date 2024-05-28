@@ -12,11 +12,20 @@ public class Pitcher : MonoBehaviour
     private Transform player; // Reference to the player object
     private bool isAlive = true; // Flag to track if the enemy is alive
 
+    private AudioSource audioSource;
+    public AudioClip nearPlayerSound;
+
 
     void Start()
     {
         // Find the player object by tag
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        // Get the AudioSource component
+        audioSource = GetComponent<AudioSource>();
+
+        // Load the near player sound
+        audioSource.clip = nearPlayerSound;
     }
 
     void Update()
@@ -29,6 +38,12 @@ public class Pitcher : MonoBehaviour
         // Check if the player is within the activation distance
         if (Vector2.Distance(transform.position, player.position) <= activationDistance)
         {
+            // Play the near player sound
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+
             // Calculate the direction to the player
             Vector2 direction = (player.position - transform.position).normalized;
 
@@ -43,6 +58,14 @@ public class Pitcher : MonoBehaviour
             {
                 Shoot(direction);
                 nextFireTime = Time.time + 1f / fireRate;
+            }
+        }
+        else
+        {
+            // Stop the near player sound if the player is not within range
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
             }
         }
     }
