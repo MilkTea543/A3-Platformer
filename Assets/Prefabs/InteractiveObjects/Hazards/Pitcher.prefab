@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 6550591383139189385}
   m_Layer: 11
   m_Name: Pitcher
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 7498238244041259807}
   bulletForce: 20
-  fireRate: 5
+  fireRate: 3
   nextFireTime: 0
   activationDistance: 10
   nearPlayerSound: {fileID: 0}
@@ -232,7 +232,7 @@ MonoBehaviour:
   moveSpeed: 0
   canDieByJump: 0
   scoreForKill: 0
-  hitPoints: 7
+  hitPoints: 5
   deadEnemy: {fileID: 0}
   deathSpinMin: -100
   deathSpinMax: 100
