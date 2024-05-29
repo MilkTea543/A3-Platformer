@@ -478,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11488040, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: sceneToStart
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11489226, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_Color.a
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b97b9ec48034ae41b9989119162bf57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToStart: 0
+  sceneToStart: 2
   changeScenes: 1
   changeMusicOnStart: 1
   inMainMenu: 1

@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 8286744, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e462e06ab54e5141b2a90441072b965, type: 3}
     - target: {fileID: 11400818, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_Type
       value: 0
@@ -151,7 +155,7 @@ PrefabInstance:
     - target: {fileID: 11423466, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: mainMusic
       value: 
-      objectReference: {fileID: 8300000, guid: b065296f4dccc4f2d9ca8a4b9dd17cd9, type: 3}
+      objectReference: {fileID: 8300000, guid: b27f1caa9d8ce3c49ad8ab51d49449bc, type: 3}
     - target: {fileID: 11432662, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: pausePanel
       value: 
@@ -472,6 +476,11 @@ PrefabInstance:
     - target: {fileID: 22496010, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576688019797750483, guid: 45616935e4fe10f48b62da1347801a16,
+        type: 3}
+      propertyPath: sceneToStart
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11488040, guid: 45616935e4fe10f48b62da1347801a16, type: 3}

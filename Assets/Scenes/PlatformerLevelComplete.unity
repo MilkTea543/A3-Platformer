@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 248, y: -54}
-  m_SizeDelta: {x: 159.36575, y: 35.86758}
+  m_AnchoredPosition: {x: 254.77647, y: -54}
+  m_SizeDelta: {x: 172.9187, y: 45.4344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &457591439
 MonoBehaviour:
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 685f0d6aa18295144b44d54dc8b7a9bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72b3d18a97f33cb4a855501a82cd608a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -417,7 +417,7 @@ PrefabInstance:
     - target: {fileID: 11423466, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: mainMusic
       value: 
-      objectReference: {fileID: 8300000, guid: b065296f4dccc4f2d9ca8a4b9dd17cd9, type: 3}
+      objectReference: {fileID: 8300000, guid: b27f1caa9d8ce3c49ad8ab51d49449bc, type: 3}
     - target: {fileID: 11424686, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_Type
       value: 0
@@ -655,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11488040, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: sceneToStart
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11489226, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_Color.a
@@ -1028,7 +1028,7 @@ PrefabInstance:
     - target: {fileID: 6576688019797750483, guid: 45616935e4fe10f48b62da1347801a16,
         type: 3}
       propertyPath: sceneToStart
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6576688019797750483, guid: 45616935e4fe10f48b62da1347801a16,
         type: 3}
