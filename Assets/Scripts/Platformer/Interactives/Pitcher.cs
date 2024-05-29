@@ -15,6 +15,8 @@ public class Pitcher : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip nearPlayerSound;
 
+    private GameObject messageTarget = null;
+    public string messageTargetMessage = null;
 
     void Start()
     {
@@ -26,6 +28,8 @@ public class Pitcher : MonoBehaviour
 
         // Load the near player sound
         audioSource.clip = nearPlayerSound;
+
+        messageTarget = GameObject.Find("Block");
     }
 
     void Update()
@@ -79,6 +83,7 @@ public class Pitcher : MonoBehaviour
 
     public void Die()
     {
+        if (messageTarget != null && messageTargetMessage != "") messageTarget.SendMessage(messageTargetMessage);
         isAlive = false;
         // Add any additional code you need to handle the enemy's death
     }

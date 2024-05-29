@@ -39,6 +39,7 @@ public class Enemy : MonoBehaviour
     public GameObject enemyPrefab;  // The prefab to spawn when the enemy dies
     public Transform spawnPoint;    // The position to spawn the new enemy
 
+  
 
     void Awake()
     {
@@ -277,7 +278,6 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-
         flickerOnDeath.Die();
 
         // set sprite to the deadEnemy sprite.
